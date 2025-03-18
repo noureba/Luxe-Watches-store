@@ -5,13 +5,15 @@ import { CiSearch } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc";
 import { FaBars } from "react-icons/fa";
-
+import Link from "next/link";
 function Header() {
   return (
     <>
       <header className="flex justify-between items-center py-4 md:px-20 px-10 shadow-md">
         <div>
-          <Image src={logo} alt="logo" width={70} height={70} />
+          <Link href="/">
+            <Image src={logo} alt="logo" width={70} height={70} />
+          </Link>
         </div>
         <div>
           <div className="bg-gray-100 flex items-center rounded-full p-2 gap-2">

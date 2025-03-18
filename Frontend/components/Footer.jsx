@@ -56,7 +56,7 @@ function Footer() {
             <h3 className="text-2xl font-medium my-5">Our Store</h3>
             <ul className="flex flex-col gap-4">
               <li>
-                <Link href="#">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="#">Contact Us</Link>
