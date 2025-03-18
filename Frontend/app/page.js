@@ -1,3 +1,4 @@
+import Banner from "../components/Banner";
 import BestSellers from "../components/BestSellers";
 import Categories from "../components/Categories";
 import Futures from "../components/Futures";
@@ -13,6 +14,7 @@ export default function Page() {
         <Categories/>
         <Recommendations/>
         <BestSellers/>
+        <Banner/>
     </div>
     </>
   )
