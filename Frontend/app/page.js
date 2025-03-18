@@ -1,3 +1,4 @@
+import Futures from "../components/Futures";
 import Slider from "../components/Slider";
 
 export default function Page() {
@@ -5,6 +6,7 @@ export default function Page() {
     <>
     <div>
         <Slider/>
+        <Futures/>
     </div>
     </>
   )

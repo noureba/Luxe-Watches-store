@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+.slider .swiper-pagination {
+  margin-top: 20px !important;
+  position: relative;
+  text-align: center;
+}
+.slider .swiper-pagination-bullet {
+  background-color: #a7a7a7;
+  border-radius: 50%;
+}
+
+.slider .swiper-pagination-bullet-active {
+  background-color: #000000;
+  transform: scale(1.5);
+}
+
+.slider .swiper-pagination-clickable .swiper-pagination-bullet:hover {
+  background-color: #606060;
+}
