@@ -1,7 +1,11 @@
+import Slider from "../components/Slider";
+
 export default function Page() {
   return (
     <>
-        <h1>Page</h1>
+    <div>
+        <Slider/>
+    </div>
     </>
   )
 }
