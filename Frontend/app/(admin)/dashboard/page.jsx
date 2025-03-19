@@ -14,7 +14,7 @@ import { GoPackage } from "react-icons/go";
 import { IoIosAddCircle } from "react-icons/io";
 
 function page() {
-  const [SideBarMenu, setSidBareMenu] = useState(false);
+  const [SideBarMenu, setSidBareMenu] = useState(true);
   const [view, setView] = useState("home");
 
   const renderComponent = () => {
@@ -32,7 +32,7 @@ function page() {
     }
   };
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div className="flex gap-10">
         <div
           className={` ${
@@ -40,7 +40,7 @@ function page() {
           }`}
         >
           <div className="bg-gray-700 flex flex-col justify-between p-4 h-screen">
-            <div className="p-2 text-center">
+            <div className="p-2 text-center cursor-pointer">
               <button onClick={() => setSidBareMenu(!SideBarMenu)}>
                 <FaBookOpen className="text-white text-3xl" />
               </button>
