@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../public/logo.png";
-import Link from "next/link";
+import Link from "next/Link";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
@@ -47,7 +47,7 @@ function Footer() {
                   <IoLogoYoutube />
                 </i>
                 <Link className=" text-gray-700" href="#">
-                  Facebook
+                  Youtube
                 </Link>
               </li>
             </ul>
