@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import stroreWatchesOne from "../../public/storeWatches1.png";
-import stroreWatchesTwo from "../../public/storeWatches2.png";
+import stroreWatchesOne from "../../../public/storeWatches1.png";
+import stroreWatchesTwo from "../../../public/storeWatches2.png";
 
 function page() {
   return (

@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import Orders from "../../components/admin/orders";
-import Products from "../../components/admin/Products";
-import Categories from "../../components/admin/Categories";
-import AddProduct from "../../components/admin/AddProducts";
+import Orders from "../../../components/admin/orders";
+import Products from "../../../components/admin/Products";
+import Categories from "../../../components/admin/Categories";
+import AddProduct from "../../../components/admin/AddProducts";
 import Image from "next/image";
-import Logo from "../../public/logo.png";
+import Logo from "../../../public/logo.png";
 import { FaBookOpen } from "react-icons/fa";
 import { GrTasks } from "react-icons/gr";
 import { IoLogOutSharp } from "react-icons/io5";
@@ -35,11 +35,11 @@ function page() {
     <div>
       <div className="flex gap-10">
         <div
-          className={`${
-            SideBarMenu ? "md:w-[5%] w-[100px]" : "md:w-[30%] w-[300px]"
+          className={` ${
+            SideBarMenu ? "md:w-[7%] w-[100px]" : "md:w-[30%] w-[300px]"
           }`}
         >
-          <div className="bg-gray-700  rounded-xl">
+          <div className="bg-gray-700 flex flex-col justify-between p-4 h-screen">
             <div className="p-2 text-center">
               <button onClick={() => setSidBareMenu(!SideBarMenu)}>
                 <FaBookOpen className="text-white text-3xl" />
@@ -102,13 +102,13 @@ function page() {
                   {!SideBarMenu ? <p>categories</p> : null}
                 </li>
               </ul>
-              <div className="flex text-white gap-2 justify-start items-center mt-10 cursor-pointer">
+            </div>
+            <div className="flex text-white gap-2 justify-start items-center mt-10 cursor-pointer p-5">
                 <i>
                   <IoLogOutSharp className="text-3xl" />
                 </i>
                 {!SideBarMenu ? <p>Logout</p> : null}
               </div>
-            </div>
           </div>
         </div>
         <div className={`${SideBarMenu ? "w-[90%]" : "w-[65%]"}`}>
@@ -118,5 +118,6 @@ function page() {
     </div>
   );
 }
+
 
 export default page;
