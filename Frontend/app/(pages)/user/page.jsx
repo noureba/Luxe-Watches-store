@@ -1,32 +1,24 @@
 "use client";
 import React, { useState } from "react";
-import Orders from "../../../components/admin/Orders";
-import Products from "../../../components/admin/Products";
-import Categories from "../../../components/admin/Categories";
-import AddProduct from "../../../components/admin/AddProducts";
+import Orders from "../../../components/user/Orders";
+import Settings from "../../../components/user/Settings";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import { FaBookOpen } from "react-icons/fa";
-import { GrTasks } from "react-icons/gr";
 import { IoLogOutSharp } from "react-icons/io5";
-import { AiFillProduct } from "react-icons/ai";
 import { GoPackage } from "react-icons/go";
-import { IoIosAddCircle } from "react-icons/io";
+import { IoIosSettings } from "react-icons/io";
 
 function page() {
-  const [SideBarMenu, setSidBareMenu] = useState(true);
+  const [SideBarMenu, setSidBareMenu] = useState(false);
   const [view, setView] = useState("home");
 
   const renderComponent = () => {
     switch (view) {
-      case "orders":
+      case "my orders":
         return <Orders />;
-      case "products":
-        return <Products />;
-      case "add Product":
-        return <AddProduct />;
-      case "categories":
-        return <Categories />;
+      case "settings":
+        return <Settings />;
       default:
         return <Orders />;
     }
@@ -39,10 +31,10 @@ function page() {
             SideBarMenu ? "md:w-[7%] w-[100px]" : "md:w-[30%] w-[300px]"
           }`}
         >
-          <div className="bg-gray-700 flex flex-col justify-between p-4 h-screen">
+          <div className="bg-white text-gray-900 border flex flex-col justify-between p-4 md:h-[100%] h-[100vh]">
             <div className="p-2 text-center cursor-pointer">
               <button onClick={() => setSidBareMenu(!SideBarMenu)}>
-                <FaBookOpen className="text-white text-3xl" />
+                <FaBookOpen className="text-gray-700 text-3xl" />
               </button>
             </div>
             <div className="flex flex-col rounded-xl bg-gray-900 justify-center items-center gap-2 text-white p-5 ">
@@ -63,47 +55,27 @@ function page() {
             <div className="p-5 flex flex-col">
               <ul className="flex flex-col gap-5">
                 <li
-                  className="flex text-white gap-2 border-0 border-b justify-start items-center cursor-pointer"
+                  className="flex text-gray-700 gap-2 border-0 border-b justify-start items-center cursor-pointer"
                   onClick={() => setView("orders")}
                 >
                   <i>
                     <GoPackage className="text-3xl" />
                   </i>
-                  {!SideBarMenu ? <p>Orders</p> : null}
+                  {!SideBarMenu ? <p>My orders</p> : null}
                 </li>
                 <li
-                  className="flex text-white gap-2 border-0 border-b justify-start items-center cursor-pointer"
-                  onClick={() => setView("products")}
+                  className="flex text-gray-700 gap-2 border-0 border-b justify-start items-center cursor-pointer"
+                  onClick={() => setView("settings")}
                 >
                   <i>
-                    <AiFillProduct className="text-3xl" />
+                    <IoIosSettings className="text-3xl" />
                   </i>
 
-                  {!SideBarMenu ? <p>Products</p> : null}
-                </li>
-                <li
-                  className="flex text-white gap-2 border-0 border-b justify-start items-center cursor-pointer"
-                  onClick={() => setView("add Product")}
-                >
-                  <i>
-                    <IoIosAddCircle className="text-3xl" />
-                  </i>
-
-                  {!SideBarMenu ? <p>Add Product</p> : null}
-                </li>
-                <li
-                  className="flex text-white gap-2 border-0 border-b justify-start items-center cursor-pointer"
-                  onClick={() => setView("categories")}
-                >
-                  <i>
-                    <GrTasks className="text-3xl" />
-                  </i>
-
-                  {!SideBarMenu ? <p>categories</p> : null}
+                  {!SideBarMenu ? <p>Settings</p> : null}
                 </li>
               </ul>
             </div>
-            <div className="flex text-white gap-2 justify-start items-center mt-10 cursor-pointer p-5">
+            <div className="flex text-gray-700 gap-2 justify-start items-center mt-10 cursor-pointer p-5">
               <i>
                 <IoLogOutSharp className="text-3xl" />
               </i>
