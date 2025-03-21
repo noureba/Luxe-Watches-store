@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../../../components/productCard";
+import ProductCard from "../../../components/ProductCard";
 import product from "../../../public/product.png";
 import Link from "next/link";
 import { FaHome } from "react-icons/fa";

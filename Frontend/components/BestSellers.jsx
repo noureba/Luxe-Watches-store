@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "./productCard";
+import ProductCard from "./ProductCard";
 import product from "../public/product.png";
 
 function BestSellers() {
