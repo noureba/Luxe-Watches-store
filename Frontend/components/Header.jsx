@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../public/logo.png";
 import { CiSearch } from "react-icons/ci";
@@ -6,7 +7,16 @@ import { BsCart2 } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+
+
 function Header() {
+  const [cartLength, setCartLength] = useState(0)
+  const cart = useSelector((item)=>item.cartItems)
+  useEffect(()=>{
+    setCartLength(cart.length)
+  })
+  
   return (
     <>
       <header className="flex justify-between items-center py-4 md:px-20 px-10 shadow-md">
@@ -35,10 +45,13 @@ function Header() {
               <VscAccount />
             </i>
           </div>
-          <div>
-            <i className="text-2xl text-gray-700">
-              <BsCart2 />
-            </i>
+          <div className="relative">
+            <Link href="/cart">
+              <i className="text-2xl text-gray-700">
+                <BsCart2 />
+              </i>
+              <p className="bg-blue-500 px-2 rounded-full text-white absolute right-[-10px] top-[-15px]">{cartLength}</p>
+            </Link>
           </div>
         </div>
         <div className="md:hidden">

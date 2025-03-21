@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../public/logo.png";
-import Link from "next/Link";
+import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";

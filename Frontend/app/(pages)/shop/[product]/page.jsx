@@ -1,7 +1,7 @@
 import React from "react";
 import SingleProductImage from "../../../../components/SingleProductImage";
 import image from "../../../../public/product.png";
-import Link from "next/Link";
+import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 import Reviews from "../../../../components/Reviews";
 import ProductDesc from "../../../../components/ProductDesc";

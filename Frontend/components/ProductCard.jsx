@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { IoBagOutline } from "react-icons/io5";
 import { IoStar } from "react-icons/io5";
-import Link from "next/Link";
+import Link from "next/link";
 
 function ProductCard(Props) {
   return (

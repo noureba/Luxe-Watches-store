@@ -1,14 +1,19 @@
+"use client";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import "../styles/globals.css";
+import { Provider } from "react-redux";
+import store from "../../redux/cart/store";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="container m-auto ">
-        <Header />
-        {children}
-        <Footer/>
+        <Provider store={store}>
+          <Header />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   );

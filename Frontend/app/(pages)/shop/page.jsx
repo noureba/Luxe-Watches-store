@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCard from "../../../components/productCard";
 import product from "../../../public/product.png";
-import Link from "next/Link";
+import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 
 async function page() {

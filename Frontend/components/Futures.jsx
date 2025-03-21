@@ -66,7 +66,6 @@ function Futures() {
       <div className="lg:hidden my-10 ml-4">
         <Swiper
           slidesPerView={1.5}
-          loop={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
