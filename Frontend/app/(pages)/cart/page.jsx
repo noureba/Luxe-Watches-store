@@ -1,17 +1,35 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import productImage from "../../../public/product.png";
 import Image from "next/image";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
+import {
+  changeShippingMethod,
+  removeFromCart,
+  updateQuantity,
+} from "../../../redux/actions/cartActions";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
 function page() {
-  const cart = useSelector((state) => state.cartItems);
-  console.log(cart);
+  const dispatch = useDispatch();
+  const store = useSelector((store) => store.cart);
+  const [cartLength, setCartLength] = useState(0);
+
+  const [selectedShipping, setSelectedShipping] = useState(store.Shipping);
+
+  const handleShippingChange = (e) => {
+    setSelectedShipping(e.target.value);
+    dispatch(changeShippingMethod(e.target.value));
+  };
+
+  useEffect(() => {
+    setCartLength(store.items.length);
+  });
 
   return (
     <div className="my-20 mx-10 ">
-      {cart.length == 0 ? (
+      {cartLength == 0 ? (
         <div className="flex flex-col justify-center items-center gap-10">
           <h1 className="text-gray-700 text-3xl font-bold">Items not found</h1>
           <Link className="bg-gray-700 text-white py-3 px-6" href="/shop">
@@ -38,10 +56,11 @@ function page() {
                       Quantity
                     </th>
                     <th className="px-4 py-2 border border-gray-300">Total</th>
+                    <th className="px-4 py-2 border border-gray-300"></th>
                   </tr>
                 </thead>
                 <tbody>
-                  {cart.map((item, index) => (
+                  {store.items.map((item, index) => (
                     <tr className="hover:bg-gray-100" key={index}>
                       <td className="px-4 py-2 border border-gray-300">
                         <Image
@@ -59,22 +78,53 @@ function page() {
                       </td>
                       <td className="px-4 py-2 border border-gray-300">
                         <div className="flex gap-1  rounded">
-                          <button className="border p-2 bg-gray-100 rounded-full cursor-pointer">
+                          <button
+                            className="border p-2 bg-gray-100 rounded-full cursor-pointer"
+                            onClick={() =>
+                              dispatch(
+                                updateQuantity(
+                                  item.id,
+                                  Math.max(1, item.quantity - 1)
+                                )
+                              )
+                            }
+                          >
                             -
                           </button>
                           <input
                             type="number"
                             className="border  border-gray-500 p-2 bg-gray-100 rounded w-20 text-center focus:outline-none"
                             value={item.quantity}
-                            readOnly
+                            onChange={(e) => {
+                              const newQuantity = Math.max(
+                                1,
+                                parseInt(e.target.value) || 1
+                              );
+                              dispatch(updateQuantity(item.id, newQuantity));
+                            }}
                           />
-                          <button className="border p-2 bg-gray-100 rounded-full cursor-pointer">
+                          <button
+                            className="border p-2 bg-gray-100 rounded-full cursor-pointer"
+                            onClick={() =>
+                              dispatch(
+                                updateQuantity(item.id, item.quantity + 1)
+                              )
+                            }
+                          >
                             +
                           </button>
                         </div>
                       </td>
                       <td className="px-4 py-2 border border-gray-300">
                         {item.quantity * item.salePrice}$
+                      </td>
+                      <td
+                        className="px-4 py-2 border border-gray-300"
+                        onClick={() => dispatch(removeFromCart(item))}
+                      >
+                        <i className="text-xl text-red-500">
+                          <IoMdCloseCircleOutline />
+                        </i>
                       </td>
                     </tr>
                   ))}
@@ -84,34 +134,66 @@ function page() {
             {/*cart card */}
             <div className="border grow-1 flex flex-col gap-5  border-gray-500 rounded p-4">
               <h3 className=" font-bold text-2xl">Total</h3>
-              <div className="border-t border-gray-500 flex justify-between items-center gap-4">
+              <div className="border-t border-gray-500 flex justify-between items-center gap-4 py-2">
                 <h3 className="text-xl font-medium text-gray-700">Subtotal:</h3>
-                <p className="text-xl  text-gray-700">543$</p>
+                <p className="text-xl  text-gray-700">{store.Subtotal}$</p>
               </div>
-              <div className="border-t border-gray-500 flex items-center justify-between gap-4">
+              <div className="border-t border-gray-500 flex items-center justify-between gap-4 py-2">
                 <h3 className="text-xl font-medium text-gray-700">Shipping:</h3>
-                <div className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    id="option1"
-                    name="options"
-                    value="1"
-                    checked="1"
-                    className="h-5 w-5 text-blue-500 border-gray-300 focus:ring-blue-500"
-                    readOnly
-                  />
-                  <label htmlFor="option1" className="text-gray-700 text-xl">
-                    Free shipping
-                  </label>
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-2">
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="shipping"
+                        value="Free"
+                        checked={selectedShipping === "Free"}
+                        onChange={handleShippingChange}
+                        className="text-blue-500 focus:ring-blue-500"
+                      />
+                      <span className="text-gray-700">
+                        Free shipping (10-15 days)
+                      </span>
+                    </label>
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="shipping"
+                        value="Standard"
+                        checked={selectedShipping === "Standard"}
+                        onChange={handleShippingChange}
+                        className="text-blue-500 focus:ring-blue-500"
+                      />
+                      <span className="text-gray-700">
+                        Standard shipping (5-7 days) +10$
+                      </span>
+                    </label>
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="shipping"
+                        value="Express"
+                        checked={selectedShipping === "Express"}
+                        onChange={handleShippingChange}
+                        className="text-blue-500 focus:ring-blue-500"
+                      />
+                      <span className="text-gray-700">
+                        Express shipping (3-2 days) +25$
+                      </span>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div className="border-t border-gray-500 flex justify-between items-center gap-4">
+              <div className="border-t border-gray-500 flex justify-between items-center gap-4 py-2">
                 <h3 className="text-xl font-medium text-gray-700">Total :</h3>
-                <p className="text-xl text-gray-700">543$</p>
+                <p className="text-xl text-gray-700">{store.totalPrice}$</p>
               </div>
-              <button className="bg-gray-900 text-xl py-3 rounded text-white">
+              <Link
+                className="bg-gray-900 text-xl py-3 rounded text-white text-center"
+                href="/checkout"
+              >
                 Ckeckout
-              </button>
+              </Link>
             </div>
           </div>
         </div>

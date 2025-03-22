@@ -1,6 +1,13 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 function page() {
+  const store = useSelector((store) => store.cart);
+  const [storeData, setStoreData] = useState(null);
+  useEffect(() => {
+    setStoreData(store);
+  }, []);
   return (
     <div className="my-20 mx-10">
       <div className="flex flex-wrap gap-10 justify-between">
@@ -63,44 +70,52 @@ function page() {
                 />
               </div>
             </div>
-
-           
           </form>
         </div>
         <div className="grow-1 border border-gray-700 rounded p-8">
-          <h3 className="font-semibold text-gray-700">Order Summary</h3>
+          <h3 className="text-2xl text-gray-700 font-bold border-b border-gray-500 py-4">
+            Order Summary
+          </h3>
+          {storeData ? (
+            <div>
+              {storeData.items.map((item, index) => (
+                <div className="flex justify-between mt-4" key={index}>
+                  <p className="text-gray-700 font-medium">{item.title}</p>
+
+                  <p className="text-gray-600">
+                    {item.quantity} ×
+                    <span className="text-green-500">{item.salePrice}$</span>
+                  </p>
+                </div>
+              ))}
+            </div>
+          ) : null}
           <div className="flex justify-between mt-4">
             <div>
-              <p className="text-gray-600">Product Name</p>
-              <p className="text-gray-600">Product Name</p>
-              <p className="text-gray-600">Product Name</p>
+              <p className="text-gray-700 font-medium">Shipping:</p>
             </div>
             <div>
-              <p className="text-gray-600">$100</p>
-              <p className="text-gray-600">$100</p>
-              <p className="text-gray-600">$100</p>
+              <p className="text-gray-600">
+                {storeData ? storeData.Shipping : 0}
+              </p>
             </div>
           </div>
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 border-t border-b border-gray-500 py-4">
             <div>
-              <p className="text-gray-600">Shipping:</p>
+              <p className=" text-2xl text-gray-700 font-bold">Total:</p>
             </div>
             <div>
-              <p className="text-gray-600">Free shipping</p>
-            </div>
-          </div>
-          <div className="flex justify-between mt-4">
-            <div>
-              <p className="text-gray-600">Total:</p>
-            </div>
-            <div>
-              <p className="text-gray-600">$310</p>
+              <p className="text-green-500">
+                {storeData ? storeData.totalPrice : 0}$
+              </p>
             </div>
           </div>
           <div>
-             {/* Payment Information */}
-             <div className="space-y-4">
-              <h3 className="font-semibold text-gray-700">Payment Method</h3>
+            {/* Payment Information */}
+            <div className="space-y-4">
+              <h3 className="font-semibold text-gray-700 font-medium">
+                Payment Method
+              </h3>
 
               {/* Radio Buttons for Payment Method */}
               <div className="flex items-center space-x-4">

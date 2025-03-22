@@ -6,14 +6,11 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/cart/actions";
+import { addToCart } from "../redux/actions/cartActions";
 import productImage from "../public/product.png";
-import Cookies from "js-cookie";
-import { useSelector } from "react-redux";
 
 function AddToCartCard() {
   const dispach = useDispatch();
-  const cart = useSelector((state) => state.cartItems);
   const [quantity, setQuantity] = useState(1);
   const product = {
     id: "45678",
@@ -30,11 +27,6 @@ function AddToCartCard() {
     size: ["S", "M", "L", "XL"],
   };
 
-  const handelrAddToCart = (pro) => {
-    ;
-  };
-
-  console.log("form cart", cart);
 
   return (
     <>

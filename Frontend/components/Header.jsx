@@ -12,9 +12,9 @@ import { useSelector } from "react-redux";
 
 function Header() {
   const [cartLength, setCartLength] = useState(0)
-  const cart = useSelector((item)=>item.cartItems)
+  const store = useSelector((store)=>store.cart.items)
   useEffect(()=>{
-    setCartLength(cart.length)
+    setCartLength(store.length)
   })
   
   return (
