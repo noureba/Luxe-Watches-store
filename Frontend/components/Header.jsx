@@ -9,14 +9,13 @@ import { FaBars } from "react-icons/fa";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 
-
 function Header() {
-  const [cartLength, setCartLength] = useState(0)
-  const store = useSelector((store)=>store.cart.items)
-  useEffect(()=>{
-    setCartLength(store.length)
-  })
-  
+  const [cartLength, setCartLength] = useState(0);
+  const store = useSelector((store) => store.cart.items);
+  useEffect(() => {
+    setCartLength(store.length);
+  });
+
   return (
     <>
       <header className="flex justify-between items-center py-4 md:px-20 px-10 shadow-md">
@@ -41,16 +40,20 @@ function Header() {
         </div>
         <div className="hidden md:flex items-center gap-4">
           <div>
-            <i className="text-2xl text-gray-700">
-              <VscAccount />
-            </i>
+            <Link href="/login">
+              <i className="text-2xl text-gray-700">
+                <VscAccount />
+              </i>
+            </Link>
           </div>
           <div className="relative">
             <Link href="/cart">
               <i className="text-2xl text-gray-700">
                 <BsCart2 />
               </i>
-              <p className="bg-blue-500 px-2 rounded-full text-white absolute right-[-10px] top-[-15px]">{cartLength}</p>
+              <p className="bg-blue-500 px-2 rounded-full text-white absolute right-[-10px] top-[-15px]">
+                {cartLength}
+              </p>
             </Link>
           </div>
         </div>

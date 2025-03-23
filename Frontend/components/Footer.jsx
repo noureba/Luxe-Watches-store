@@ -53,53 +53,56 @@ function Footer() {
             </ul>
           </div>
           <div>
+            <h3 className="text-2xl font-medium my-5">Our Info</h3>
+            <ul>
+              <li className="text-gray-700 mb-2">
+                Email:{" "}
+                <a
+                  href="mailto:support@luxewatches.com"
+                  className="text-white hover:text-gray-300"
+                >
+                  support@luxewatches.com
+                </a>
+              </li>
+              <li className="text-gray-700 mb-2">Phone: +1 234 567 890</li>
+              <li className="text-gray-700 mb-2">
+                123 Luxury Avenue, Fashion City
+              </li>
+              <li className="text-gray-700 mb-2">State, Country - 12345</li>
+            </ul>
+          </div>
+          <div>
             <h3 className="text-2xl font-medium my-5">Our Store</h3>
             <ul className="flex flex-col gap-4">
               <li>
                 <Link href="/about">About Us</Link>
               </li>
               <li>
-                <Link href="#">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
+              </li>
+
+              <li>
+                <Link href="/shop">Shop</Link>
               </li>
               <li>
-                <Link href="#">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="#">Terms & Conditions</Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-2xl font-medium my-5">Our Store</h3>
-            <ul className="flex flex-col gap-4">
-              <li>
-                <Link href="#">About Us</Link>
-              </li>
-              <li>
-                <Link href="#">Contact Us</Link>
-              </li>
-              <li>
-                <Link href="#">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="#">Terms & Conditions</Link>
+                <Link href="/shop">Categories</Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-2xl font-medium my-5">Our Store</h3>
+            <h3 className="text-2xl font-medium my-5">Our Policy</h3>
             <ul className="flex flex-col gap-4">
               <li>
-                <Link href="#">About Us</Link>
+                <Link href="/privacy-policy">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="#">Contact Us</Link>
+                <Link href="/terms-conditions">Terms & Conditions</Link>
               </li>
               <li>
-                <Link href="#">Privacy Policy</Link>
+                <Link href="/returns">Returns & Exchanges</Link>
               </li>
               <li>
-                <Link href="#">Terms & Conditions</Link>
+                <Link href="refound">Refound Policy</Link>
               </li>
             </ul>
           </div>

@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper/modules";
+import Link from "next/link";
 
 export default function App() {
   return (
@@ -36,9 +37,9 @@ export default function App() {
                 Browse our curated collection of iconic timepieces from Rolex,
                 <br /> Audemars Piguet, Patek Philippe, and more.
               </p>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded">
+              <Link href="/shop" className="bg-gray-700 text-white py-2 px-4 rounded">
                 Shop Now
-              </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -53,9 +54,9 @@ export default function App() {
                 Browse our curated collection of iconic timepieces from Rolex,
                 <br /> Audemars Piguet, Patek Philippe, and more.
               </p>
-              <button className="bg-gray-700 text-white py-2 px-4 rounded">
+              <Link href="/shp" className="bg-gray-700 text-white py-2 px-4 rounded">
                 Shop Now
-              </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>

@@ -1,6 +1,7 @@
 import React from "react";
 import banner from "../public/banner.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function Banner() {
   return (
@@ -16,9 +17,9 @@ function Banner() {
               Browse our curated collection of iconic timepieces from Rolex,
               <br /> Audemars Piguet, Patek Philippe, and more.
             </p>
-            <button className="bg-white text-gray-700 py-2 px-4 rounded">
+            <Link href="/shop" className="bg-white text-gray-700 py-2 px-4 rounded">
               Shop Now
-            </button>
+            </Link>
           </div>
         </div>
       </div>
