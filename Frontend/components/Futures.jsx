@@ -77,8 +77,8 @@ function Futures() {
           modules={[Pagination]}
           className="slider"
         >
-          <SwiperSlide >
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-4 min-w-[250px] min-h-[130px]">
+          <SwiperSlide>
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-2 min-w-[150px] min-h-[150px]">
               <div>
                 <i className="text-gray-700 text-4xl">
                   <FaShippingFast />
@@ -93,7 +93,7 @@ function Futures() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-4 min-w-[250px] min-h-[130px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-2 min-w-[150px] min-h-[150px]">
               <div>
                 <i className="text-gray-700 text-4xl">
                   <GiReturnArrow />
@@ -108,7 +108,7 @@ function Futures() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-4 min-w-[250px] min-h-[130px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded  p-2 min-w-[150px] min-h-[150px]">
               <div>
                 <i className="text-gray-700 text-4xl">
                   <BiWorld />
@@ -123,7 +123,7 @@ function Futures() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-4 min-w-[250px] min-h-[130px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded  p-2 min-w-[150px] min-h-[150px]">
               <div>
                 <i className="text-gray-700 text-4xl">
                   <BiDollar />

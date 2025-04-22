@@ -4,7 +4,7 @@ import product from "../public/product.png";
 function Recommendations() {
   return (
     <>
-      <div className="my-20 mx-10">
+      <div className="my-20 md:mx-10 mx-5">
         <div className="mb-4">
           <p className="text-3xl text-gray-900 font-medium">
             Recommendations.

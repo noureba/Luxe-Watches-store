@@ -21,7 +21,7 @@ function Categories() {
           </p>
         </div>
         <Swiper
-          slidesPerView={3.5}
+          slidesPerView={1.5}
           breakpoints={{
             320: { slidesPerView: 1.5 },
             640: { slidesPerView: 1.5 },
@@ -42,9 +42,9 @@ function Categories() {
           className="slider"
         >
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-4  min-h-[140px] min-w-[150px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-2  min-h-[140px] min-w-[150x]">
               <div className="flex flex-col items-start  gap-2">
-                <h3 className="font-bold text-xl text-gray-700 text-nowrap">For Men's </h3>
+                <h3 className="font-bold text-xl text-gray-700 ">For Men's </h3>
                 <p className="text-gray-500">Starting at $24</p>
               </div>
               <Link
@@ -59,9 +59,9 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-4 min-w-[300px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
-                <h3 className="font-bold text-xl text-gray-700 text-nowrap">For Women's</h3>
+                <h3 className="font-bold text-xl text-gray-700 ">For Women's</h3>
                 <p className="text-gray-500">Starting at $19</p>
               </div>
               <Link
@@ -76,9 +76,9 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-4 min-w-[300px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
-                <h3 className="font-bold text-xl text-gray-700 text-nowrap">Accessories</h3>
+                <h3 className="font-bold text-xl text-gray-700 ">Accessories</h3>
                 <p className="text-gray-500">Explore accessories</p>
               </div>
               <Link
@@ -93,9 +93,9 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-4 min-w-[300px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
-                <h3 className="font-bold text-xl text-gray-700 text-nowrap">Accessories</h3>
+                <h3 className="font-bold text-xl text-gray-700 ">Accessories</h3>
                 <p className="text-gray-500">Explore accessories</p>
               </div>
               <Link
@@ -110,9 +110,9 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-4 min-w-[300px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
-                <h3 className="font-bold text-xl text-gray-700 text-nowrap">Accessories</h3>
+                <h3 className="font-bold text-xl text-gray-700 ">Accessories</h3>
                 <p className="text-gray-500">Explore accessories</p>
               </div>
               <Link
@@ -127,9 +127,9 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-4 min-w-[300px]">
+            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
-                <h3 className="font-bold text-xl text-gray-700 text-nowrap">Accessories</h3>
+                <h3 className="font-bold text-xl text-gray-700 ">Accessories</h3>
                 <p className="text-gray-500">Explore accessories</p>
               </div>
               <Link

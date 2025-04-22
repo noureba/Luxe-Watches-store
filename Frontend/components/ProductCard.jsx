@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function ProductCard(Props) {
   return (
-    <Link href={`/shop/${Props.title}`}>
+    <Link className=" " href={`/shop/${Props.title}`}>
       <div className="border border-gray-200 rounded-lg p-4 cursor-pointer">
         <div className="relative">
           <Image
