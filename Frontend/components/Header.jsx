@@ -21,16 +21,14 @@ function Header() {
   return (
     <>
       <header className="flex justify-between items-center py-4 md:px-20 px-10 shadow-md">
-        <div className="flex items-center gap-4">
-          <div className="">
-            <span
-              className="text-3xl text-gray-700 cursor-pointer"
-              onClick={() => setNavOpen(true)}
-            >
-              <FaBars />
-            </span>
-          </div>
-          <Link href="/">
+        <div className="flex items-center gap-10">
+          <span
+            className="text-3xl text-gray-700 cursor-pointer "
+            onClick={() => setNavOpen(true)}
+          >
+            <FaBars />
+          </span>
+          <Link  href="/">
             <Image src={logo} alt="logo" width={70} height={70} />
           </Link>
         </div>
@@ -77,20 +75,35 @@ function Header() {
             <IoMdCloseCircle />
           </span>
           <ul className="flex flex-col gap-10">
-          <li className="border-b-2 border-gray-300 py-2" onClick={() => setNavOpen(false)}>
+            <li
+              className="border-b-2 border-gray-300 py-2"
+              onClick={() => setNavOpen(false)}
+            >
               <Link href="/">Home</Link>
             </li>
-            <li className="border-b-2 border-gray-300 py-2" onClick={() => setNavOpen(false)}>
+            <li
+              className="border-b-2 border-gray-300 py-2"
+              onClick={() => setNavOpen(false)}
+            >
               <Link href="/about">About Us</Link>
             </li>
-            <li className="border-b-2 border-gray-300 py-2" onClick={() => setNavOpen(false)}>
+            <li
+              className="border-b-2 border-gray-300 py-2"
+              onClick={() => setNavOpen(false)}
+            >
               <Link href="/contact">Contact Us</Link>
             </li>
 
-            <li className="border-b-2 border-gray-300 py-2" onClick={() => setNavOpen(false)}>
+            <li
+              className="border-b-2 border-gray-300 py-2"
+              onClick={() => setNavOpen(false)}
+            >
               <Link href="/shop">Shop</Link>
             </li>
-            <li className="border-b-2 border-gray-300 py-2" onClick={() => setNavOpen(false)}>
+            <li
+              className="border-b-2 border-gray-300 py-2"
+              onClick={() => setNavOpen(false)}
+            >
               <Link href="/login">Login</Link>
             </li>
             <ul className="flex flex-col gap-4"></ul>

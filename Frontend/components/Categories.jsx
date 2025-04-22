@@ -49,7 +49,7 @@ function Categories() {
                 <p className="text-gray-500">Starting at $24</p>
               </div>
               <Link
-                className="flex text-nowrap justify-center items-center gap-2 text-gray-700 px-4 py-2"
+                className="flex  justify-center items-center gap-2 text-gray-700 px-4 py-2"
                 href="/shop"
               >
                 Shop now
@@ -66,7 +66,7 @@ function Categories() {
                 <p className="text-gray-500">Starting at $19</p>
               </div>
               <Link
-                className="flex text-nowrap justify-center items-center gap-2 text-gray-700 px-4 py-2"
+                className="flex  justify-center items-center gap-2 text-gray-700 px-4 py-2"
                 href="/shop"
               >
                 Shop now
@@ -83,7 +83,7 @@ function Categories() {
                 <p className="text-gray-500">Explore accessories</p>
               </div>
               <Link
-                className="flex text-nowrap justify-center items-center gap-2 text-gray-700 px-4 py-2"
+                className="flex  justify-center items-center gap-2 text-gray-700 px-4 py-2"
                 href="/shop"
               >
                 Shop now
@@ -100,7 +100,7 @@ function Categories() {
                 <p className="text-gray-500">Explore accessories</p>
               </div>
               <Link
-                className="flex text-nowrap justify-center items-center gap-2 text-gray-700 px-4 py-2"
+                className="flex  justify-center items-center gap-2 text-gray-700 px-4 py-2"
                 href="/shop"
               >
                 Shop now
@@ -117,7 +117,7 @@ function Categories() {
                 <p className="text-gray-500">Explore accessories</p>
               </div>
               <Link
-                className="flex text-nowrap justify-center items-center gap-2 text-gray-700 px-4 py-2"
+                className="flex  justify-center items-center gap-2 text-gray-700 px-4 py-2"
                 href="/shop"
               >
                 Shop now
@@ -134,7 +134,7 @@ function Categories() {
                 <p className="text-gray-500">Explore accessories</p>
               </div>
               <Link
-                className="flex text-nowrap justify-center items-center gap-2 text-gray-700 px-4 py-2"
+                className="flex justify-center items-center gap-2 text-gray-700 px-4 py-2"
                 href="/shop"
               >
                 Shop now
