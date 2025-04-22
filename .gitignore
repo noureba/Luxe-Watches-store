@@ -2,3 +2,8 @@ Frontend/node_modules
 Frontend/.next
 Frontend/.env
 Frontend/dist
+
+Backend/node_modules
+Backend/.next
+Backend/.env
+Backend/dist
