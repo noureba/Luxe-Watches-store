@@ -4,7 +4,7 @@ import Link from "next/link";
 function page() {
   return (
     <div className="flex justify-center items-center h-screen p-10">
-      <div className="flex flex-col gap-4 justify-center  p-10 my-20 border border-gray-500 rounded" >
+      <div className="flex flex-col gap-4 justify-center  bg-blue-100 min-w-[350px] md:min-w-[500px] p-10 my-20 border border-gray-500 rounded" >
         <h1 className="text-2xl my-5 text-gray-700 font-bold text-center">Regitser</h1>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
@@ -12,7 +12,7 @@ function page() {
               Full Name
             </label>
             <input
-              className="rounded border border-gray-700 text-gray-700 p-2 w-[400px]"
+              className="rounded border border-gray-700 text-gray-700 p-2 bg-white"
               type="text"
               name="fullName"
               placeholder="Jhon..."
@@ -22,7 +22,7 @@ function page() {
               Email
             </label>
             <input
-              className="rounded border border-gray-700 text-gray-700 p-2 w-[400px]"
+              className="rounded border border-gray-700 text-gray-700 p-2 bg-white"
               type="email"
               name="email"
               placeholder="example@gmail.com"
@@ -32,7 +32,7 @@ function page() {
               Password
             </label>
             <input
-              className="rounded border border-gray-700 text-gray-700 p-2 w-[400px]"
+              className="rounded border bg-white border-gray-700 text-gray-700 p-2"
               type="password"
               name="fullName"
               required

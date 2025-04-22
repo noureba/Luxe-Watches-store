@@ -6,12 +6,10 @@ import { FaLocationDot } from "react-icons/fa6";
 
 function page() {
   return (
-    <div className="my-20 md:mx-20 mx-10">
-      <div className="flex flex-wrap justify-around items-center">
-        <div className="flex flex-col justify-start gap-4 items-start my-10">
-        <h3 className='text-2xl my-10 text-gray-700 font-bold'>Get in touch with us</h3>
-
-          <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-4 min-w-[300px]">
+    <div className="my-10  md:mx-10 mx-5">
+      <div className="flex flex-wrap justify-between items-center gap-20">
+        <div className="flex flex-col justify-start gap-4 items-start">
+          <div className="flex justify-start bg-blue-100 gap-4 items-center border border-gray-700 rounded p-4 min-w-[350px]">
             <div>
               <i className="text-gray-700 text-4xl">
                 <MdOutlineMail />
@@ -22,7 +20,7 @@ function page() {
               <p className="text-gray-500">contact@domain.com</p>
             </div>
           </div>
-          <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-4 min-w-[300px]">
+          <div className="flex justify-start bg-blue-100 gap-4 items-center border border-gray-700 rounded p-4 min-w-[350px]">
             <div>
               <i className="text-gray-700 text-4xl">
                 <FaPhoneAlt />
@@ -33,7 +31,7 @@ function page() {
               <p className="text-gray-500">+1 765 354 863</p>
             </div>
           </div>
-          <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-4 min-w-[300px]">
+          <div className="flex justify-start bg-blue-100 gap-4 items-center border border-gray-700 rounded p-4 min-w-[350px]">
             <div>
               <i className="text-gray-700 text-4xl">
                 <FaLocationDot />
@@ -45,11 +43,10 @@ function page() {
             </div>
           </div>
         </div>
-        <div>
-        <ContactForm />
+        <div className=" grow">
+          <ContactForm />
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 }
