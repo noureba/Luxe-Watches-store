@@ -4,7 +4,7 @@ import Link from "next/link";
 function page() {
   return (
     <div className="flex justify-center items-center h-screen p-10">
-      <div className="flex flex-col gap-4 justify-center bg-blue-100  p-10 my-20 border border-gray-500 rounded md:min-w-[500px] min-w-[350px]" >
+      <div className="flex flex-col gap-4 justify-center mx-10 bg-blue-100  p-10 my-20 border border-gray-500 rounded md:min-w-[500px] min-w-[350px]" >
         <h1 className="text-2xl my-5 text-gray-700 font-bold text-center">
           Login
         </h1>

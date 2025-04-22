@@ -76,7 +76,7 @@ function AddToCartCard() {
             ))}
           </div>
         </div>
-        <div className="flex justify-between gap-4">
+        <div className="flex flex-wrap justify-between gap-4">
           <div className="flex gap-1  rounded">
             <button
               className="border p-2 bg-gray-100 rounded-full cursor-pointer"

@@ -3,7 +3,7 @@ import React from "react";
 function page() {
   return (
     <div className="flex justify-center items-center h-screen p-10">
-      <div className="flex flex-col gap-4 justify-center min-w-[350px] md:min-w-[500px] bg-blue-100   p-10 my-20 border border-gray-500 rounded" >
+      <div className="flex flex-col gap-4 justify-center min-w-[350px] md:min-w-[500px] bg-blue-100 mx-10  p-10 my-20 border border-gray-500 rounded" >
         <h1 className="text-2xl my-5 text-gray-700 font-bold text-center">Reset Password</h1>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
