@@ -53,25 +53,25 @@ export default function App() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative ">
+          <div className="relative overflow-hidden">
             <Image
-              className=" min-h-72 object-cover"
+              className=" min-h-80 object-cover"
               src={SlideOne}
               width="100%"
               height="100%"
               alt="slider one"
             />
-            <div className="absolute lg:top-[30%] top-10 md:left-20 left-10 z-10 text-gray-900">
-              <h3 className="font-bold 2xl:text-6xl text-3xl lg:max-w-[60%]">
+            <div className="absolute lg:top-[30%] top-10 md:left-20 left-10 z-10 text-gray-900 ">
+              <h3 className="font-bold lg:text-6xl text-3xl md:max-w-[60%]">
                 Experience the Art of Watchmaking
               </h3>
-              <p className="text-gray-900 md:my-10 my-5 text-wrap">
+              <p className="text-gray-900 lg:my-10 my-5 text-wrap">
                 Browse our curated collection of iconic timepieces from Rolex,
                 <br /> Audemars Piguet, Patek Philippe, and more.
               </p>
               <Link
                 href="/shop"
-                className="bg-gray-700 lg:font-medium text-xl text-white py-2 px-6 rounded"
+                className="bg-gray-700 font-medium text-xl text-white py-2 px-6 rounded"
               >
                 Shop Now
               </Link>

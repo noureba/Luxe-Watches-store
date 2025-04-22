@@ -28,6 +28,7 @@ function Categories() {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 2 },
             1200: { slidesPerView: 3.5 },
+            1400: { slidesPerView: 4.5 },
           }}
           loop={true}
           autoplay={{
@@ -42,7 +43,7 @@ function Categories() {
           className="slider"
         >
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded p-2  min-h-[140px] min-w-[150x]">
+            <div className="flex justify-center gap-1 items-center border border-gray-700 rounded p-2  min-h-[140px] min-w-[150x]">
               <div className="flex flex-col items-start  gap-2">
                 <h3 className="font-bold text-xl text-gray-700 ">For Men's </h3>
                 <p className="text-gray-500">Starting at $24</p>
@@ -59,7 +60,7 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
+            <div className="flex justify-center gap-1 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
                 <h3 className="font-bold text-xl text-gray-700 ">For Women's</h3>
                 <p className="text-gray-500">Starting at $19</p>
@@ -76,7 +77,7 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
+            <div className="flex justify-center gap-1 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
                 <h3 className="font-bold text-xl text-gray-700 ">Accessories</h3>
                 <p className="text-gray-500">Explore accessories</p>
@@ -93,7 +94,7 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
+            <div className="flex justify-center gap-1 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
                 <h3 className="font-bold text-xl text-gray-700 ">Accessories</h3>
                 <p className="text-gray-500">Explore accessories</p>
@@ -110,7 +111,7 @@ function Categories() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center gap-4 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
+            <div className="flex justify-center gap-1 items-center border border-gray-700 rounded min-h-[140px] p-2 min-w-[200px]">
               <div className="flex flex-col items-start  gap-2">
                 <h3 className="font-bold text-xl text-gray-700 ">Accessories</h3>
                 <p className="text-gray-500">Explore accessories</p>
