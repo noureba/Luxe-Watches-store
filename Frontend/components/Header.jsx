@@ -24,7 +24,7 @@ function Header() {
             <Image src={logo} alt="logo" width={70} height={70} />
           </Link>
         </div>
-        <div>
+        <div className="hidden md:block">
           <div className="bg-gray-100 flex items-center rounded-full p-2 gap-2">
             <i className="text-2xl">
               <CiSearch />

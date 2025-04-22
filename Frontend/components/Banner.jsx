@@ -8,7 +8,7 @@ function Banner() {
     <>
       <div className="my-20 flex justify-center">
         <div className="relative">
-          <Image src={banner} width={1000} height="100%" alt="banner" />
+          <Image className=" min-h-[250px] object-cover" src={banner} width={1000} height="100%" alt="banner" />
           <div className="absolute md:top-[30%] top-5 md:left-20 left-10 z-10 text-white">
             <h3 className="font-bold md:text-4xl text-2xl">
             100% Original Products

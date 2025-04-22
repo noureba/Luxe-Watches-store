@@ -14,7 +14,7 @@ function Footer() {
   return (
     <>
       <footer>
-        <div className="flex flex-wrap justify-between gap-4 p-4 border-t border-t-gray-500 px-10 py-20">
+        <div className="flex flex-wrap flex-col md:flex-row justify-between gap-4 p-4 border-t border-t-gray-500 px-10 py-20">
           <div>
             <Image src={logo} width={100} alt="logo" />
             <ul className="flex flex-col gap-4">
