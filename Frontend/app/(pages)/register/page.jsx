@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../../redux/actions/authActions";
-import { toast } from "sonner";
 
 function page() {
   const dispatch = useDispatch();
@@ -66,12 +65,12 @@ function page() {
         </div>
         <button
           className={`${
-            store.auth.loading ? "bg-gray-500" : "bg-blue-500"
+            store.auth.loading ? "bg-gray-900" : "bg-gray-500"
           } text-white font-bold py-2 px-4 rounded`}
           disabled={store.auth.loading}
           onClick={handleSubmit}
         >
-          Sing up
+          {store.auth.loading ? "Loading..." : "Register"}
         </button>
         <div>
           <Link href="/login" className="text-blue-500 underline my-5">
