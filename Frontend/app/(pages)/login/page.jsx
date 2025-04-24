@@ -1,10 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../../redux/actions/authActions";
+import { useRouter } from "next/navigation";
 
 function page() {
+  const router = useRouter();
   const dispatch = useDispatch();
   const store = useSelector((store) => store);
 
@@ -13,14 +15,20 @@ function page() {
     password: "",
   });
 
-
   const handleSubmit = () => {
     dispatch(loginUser(info));
-    setInfo({
-      email: "",
-      password: "",
-    });
   };
+
+  useEffect(() => {
+    if (store.auth.isAuthenticated) {
+      setInfo({
+        email: "",
+        password: "",
+      });
+      router.push("/user");
+    }
+  }, [store.auth.isAuthenticated]);
+
   return (
     <div className="flex justify-center items-center h-screen p-10">
       <div className="flex flex-col gap-4 justify-center mx-10 bg-blue-100  p-10 my-20 border border-gray-500 rounded md:min-w-[500px] min-w-[350px]">

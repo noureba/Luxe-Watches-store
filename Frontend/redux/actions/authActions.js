@@ -48,7 +48,7 @@ export const loginUser = (userInfo) => {
       const data = await response.json();
       if (data.success) {
         toast.success(data.message);
-        dispatch({ type: "Login_USER_SUCCESS" });
+        dispatch({ type: "LOGIN_USER_SUCCESS", payload: data });
       } else {
         toast.error(data.message);
         dispatch({ type: "LOGIN_USER_FAIL", payload: data.message });

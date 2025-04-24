@@ -1,11 +1,8 @@
-const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-
 const initialState = {
-  user: null,
   loading: false,
   error: null,
   isAuthenticated: false,
-  token: null,
+  isRegisted: false,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -19,6 +16,7 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+        isRegisted: action.payload.success,
       };
 
     case "REGISTER_USER_FAIL":
@@ -37,7 +35,7 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        isAuthenticated: true,
+        isAuthenticated: action.payload.success,
       };
 
     case "LOGIN_USER_FAIL":

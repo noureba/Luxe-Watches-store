@@ -1,10 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../../redux/actions/authActions";
+import { useRouter } from "next/navigation";
 
 function page() {
+  const router = useRouter();
+
   const dispatch = useDispatch();
   const store = useSelector((store) => store);
 
@@ -17,6 +20,16 @@ function page() {
   const handleSubmit = () => {
     dispatch(registerUser(info));
   };
+  useEffect(() => {
+    if (store.auth.isRegisted) {
+      setInfo({
+        fullName: "",
+        email: "",
+        password: "",
+      });
+      router.push("/login");
+    }
+  }, [store.auth.isRegisted]);
 
   return (
     <div className="flex justify-center items-center h-screen p-10">

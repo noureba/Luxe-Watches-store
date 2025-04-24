@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Orders from "../../../components/user/Orders";
 import Settings from "../../../components/user/Settings";
 import Image from "next/image";
@@ -8,8 +8,14 @@ import { FaBookOpen } from "react-icons/fa";
 import { IoLogOutSharp } from "react-icons/io5";
 import { GoPackage } from "react-icons/go";
 import { IoIosSettings } from "react-icons/io";
+import { useSelector, useDispatch } from "react-redux";
+import { getData } from "../../../redux/actions/dataActions";
+import { useRouter } from "next/navigation";
 
-function page() {
+function Page() {
+  const dispatch = useDispatch();
+  const data = useSelector((store) => store.data);
+  const router = useRouter();
   const [SideBarMenu, setSidBareMenu] = useState(false);
   const [view, setView] = useState("home");
 
@@ -23,6 +29,11 @@ function page() {
         return <Orders />;
     }
   };
+
+  useEffect(() => {
+    dispatch(getData());
+  }, []);
+
   return (
     <div className="overflow-x-hidden">
       <div className="flex gap-10">
@@ -91,4 +102,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
