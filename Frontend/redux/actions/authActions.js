@@ -12,6 +12,8 @@ export const registerUser = (userInfo) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(userInfo),
+          credentials: "include",
+
         }
       );
 

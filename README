@@ -1,0 +1,22 @@
+# 🛒 Luxe Watches Store
+
+Welcome to the **Luxe Watches Store** frontend project!  
+This is a modern and responsive eCommerce frontend built with **Next.js**.
+
+---
+
+## 📚 Project Overview
+
+This frontend provides an elegant shopping experience for luxury watches.  
+It connects to a backend API for user authentication, product listings, and order management.
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js** (React Framework)
+- **Redux** (State Management)
+- **Tailwind CSS** (Styling)
+- **React Toastify** (Notifications)
+- **Fetch API** (HTTP Requests)
+- **Vercel** (Deployment)
